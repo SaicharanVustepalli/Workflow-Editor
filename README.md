@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Workflow Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A visual workflow editor built with React and React Flow, allowing users to create, edit, and simulate workflow diagrams.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Drag and drop nodes to create workflows
+- Connect nodes with edges
+- Edit node properties
+- Validate workflow connections
+- Simulate workflow execution
+- Undo/Redo functionality
+- Export/Import workflows
+- Template selection
+- Search functionality
 
-### `npm start`
+## Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Install dependencies:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm install
 
-### `npm test`
+To Start the development server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm start
 
-### `npm run build`
+## Project Structure
+- /src/components - React components including nodes and editor
+- /src/store - State management using Zustand
+- /src/types - TypeScript type definitions
+- /src/utils - Utility functions for validation and templates
+## Node Types
+- Start Node : Entry point of the workflow
+- Action Node : Represents a task or action
+- Decision Node : Represents a conditional branch
+- End Node : Terminal point of the workflow
+## Usage
+1. Drag nodes from the sidebar onto the canvas
+2. Connect nodes by dragging from one node's handle to another
+3. Click on nodes to edit their properties
+4. Use the toolbar to:
+   - Save/Load workflows
+   - Export workflows as JSON
+   - Apply templates
+   - Undo/Redo changes
+## Simulation
+The workflow can be simulated using the simulation panel:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Click "Start Simulation" to begin
+2. Use "Step Forward" to execute each node
+3. View execution logs in the simulation panel
+## Validation
+The editor validates:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Node connections
+- Workflow structure
+- Start/End node requirements
+- Cycle detection
+## Technologies Used
+- React
+- React Flow
+- TypeScript
+- Tailwind CSS
+- Zustand
